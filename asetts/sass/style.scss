@@ -1,0 +1,13 @@
+@charset 'utf-8';
+@use 'base/base';
+@use 'mixin/font';
+@use 'mixin/padding';
+@use 'mixin/size';
+@use 'mixin/break';
+@use 'mixin/sp';
+@use 'mixin/container';
+@use 'mixin/tk';
+
+body{
+    font-size: 16px;
+}

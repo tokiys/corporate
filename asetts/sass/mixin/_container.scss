@@ -1,0 +1,6 @@
+@use '../mixin/size';
+
+@mixin container{
+    margin: 0 auto;
+    max-width: size.$container1;
+}
