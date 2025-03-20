@@ -1,0 +1,15 @@
+@mixin section-title{
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+@mixin title-pro{
+    color: #121212;
+    margin-bottom: 53px;
+    &::before{
+        background-color: #121212;
+    }
+    &::after{
+        background-color: #121212;
+    }
+}

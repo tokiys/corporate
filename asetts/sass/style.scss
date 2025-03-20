@@ -7,7 +7,221 @@
 @use 'mixin/sp';
 @use 'mixin/container';
 @use 'mixin/tk';
+@use 'mixin/img';
+@use 'mixin/title';
 
 body{
-    font-size: 16px;
+    @include font.arial();
+    color: base.$black12;
+    display: flex;
+}
+
+img{
+    @include img.img;
+}
+
+/*-- utility --*/
+
+.section-container{
+    @include container.container();
+}
+.section-title{
+    @include title.section-title();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &::before{
+        content: '';
+        width: 240px;
+        height: 1px;
+        background-color: #ffffff;
+
+    }
+    &::after{
+        content: '';
+        width: 240px;
+        height: 1px;
+        background-color: #ffffff;
+
+    }
+}
+
+
+
+/*-------- header --------*/
+
+.header{
+    width: 300px;
+    padding: 40px 45px;
+    .logo{
+        width: 205px;
+        height: 60px;
+        margin-bottom: 35px;
+    }
+    .header-nav .header-nav-list li{
+        padding-bottom: 11px;
+        a{
+            color: #121212;
+            font-size: font.$nav-fs;
+        }
+    }
+    .header-nav .header-nav-list li:last-of-type{
+        padding-bottom: 70px;
+    }
+    .header-nav .header-nav-sns li{
+        padding-bottom: 11px;
+        a{
+            color: #121212;
+            font-size: font.$nav-fs;
+        }
+    }
+    .header-nav .header-nav-sns  li:last-of-type{
+        padding-bottom: 0;
+    }
+
+}
+
+
+
+
+/*-------- main --------*/
+
+.main{
+    width: 100%;
+    /*-------- first view --------*/
+    .video-aria {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+        .video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    /*-------- background-image --------*/
+    .section-gd{
+        background: linear-gradient(
+            rgba(84, 84, 84, 0.3),  // #545454 with 30% opacity
+            rgba(80, 80, 80, 0.7),  // #505050 with 70% opacity
+            rgba(0, 0, 0, 0.8)      // #000000 with 80% opacity
+        );
+        /*-------- introduction --------*/
+        .introduction{
+            padding: 75px 0 155px;
+            h2{
+                margin-bottom: 56px;
+            }
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 50px;  // 要素間の間隔
+                justify-content: space-between;  // 均等に配置
+    
+                li{
+                    width: calc(50% - 28px);  // 2列で表示（間隔を考慮）
+                }
+            }
+        }
+        /*-------- features --------*/
+        .features{
+            padding-bottom: 158px;
+            h2{
+                margin-bottom: 59px;
+            }
+            .features-inner{
+                display: flex;
+                justify-content: space-between;
+                .features-list{
+                    width: 33%;
+                    padding-right: 43px;
+                    color: #ffffff;
+                    text-align: center;
+                    &:last-of-type{
+                        padding-right: 0;
+                    }
+                    h3{
+                        font-size: 14px;
+                        width: 258px;
+                        height: 258px;
+                        border-radius: 50%;
+                        border: 1px solid #ffffff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 12px;
+                        box-sizing: border-box;
+                    }
+                    h4{
+                        font-size: 16px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .home-flow{
+        padding: 115px 0 125px;
+        
+        h2{
+            @include title.title-pro();
+        }
+        .section-text{
+            font-size: 16px;
+            margin-bottom: 58px;
+        }
+        .home-flow__wrapper{
+            display: flex;
+            .flow-image{
+                width: 200px;
+                margin-right: 41px;
+            }
+            .flow-steps{
+                .flow-step{
+                    .flow-step__list{
+                        display: flex;
+                        .flow-step__number{
+                            color: #ffffff;
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 50%;
+                            background-color: #414141;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right : 10px;
+                        }
+                        .flow-step__title {
+                            font-size: 20px;
+                            border-bottom: 1px solid #121212;
+                        }
+                        .flow-step__text{
+                            font-size: 16px;
+                            margin-bottom: 46px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    .contact{
+        padding-bottom: 160px;
+        h2{
+            @include title.title-pro();
+        }
+        p{
+            font-size: 16px;
+            margin-bottom: 53px;
+        }
+    }
 }

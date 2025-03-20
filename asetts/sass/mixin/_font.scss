@@ -1,17 +1,15 @@
 /* ------------------------------------------ */
 /* ----------------フォント名----------------- */
 /* ------------------------------------------ */
-@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;900&display=swap');
+@use 'tk';
 
 // regular
-@mixin zen-kaku-gothic-new-r {
-        font-family: "Zen Kaku Gothic New", serif;
-        font-weight: 400;
+@mixin arial{
+        font-family: Arial, Helvetica, sans-serif;
         font-style: normal;
+        font-feature-settings: "palt";
+        font-weight: 500;
+        line-height: 1.5;
+        @include tk.tracking(0);
 }
-// black
-@mixin zen-kaku-gothic-new-bl {
-        font-family: "Zen Kaku Gothic New", serif;
-        font-weight: 900;
-        font-style: normal;
-}
+$nav-fs: 16px;
