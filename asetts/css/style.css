@@ -83,6 +83,9 @@ img {
   width: 100%;
   /*-------- first view --------*/
   /*-------- background-image --------*/
+  /*-------- home-flow --------*/
+  /*-------- contact --------*/
+  /*-------- footer --------*/
 }
 .main .video-aria {
   width: 100%;
@@ -215,8 +218,88 @@ img {
 .main .contact h2::after {
   background-color: #121212;
 }
-.main .contact p {
+.main .contact .contact-text {
   font-size: 16px;
   margin-bottom: 53px;
+}
+.main .contact .contact-item {
+  display: flex;
+  justify-content: space-between;
+}
+.main .contact .contact-item .contact-item__list {
+  width: 258px;
+  height: 183px;
+  border: 1px solid #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.main .contact .contact-item .contact-item__list::before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  right: -9px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #121212;
+  transform: rotate(135deg);
+}
+.main .contact .contact-item .contact-item__list .item-list__inner {
+  text-align: center;
+}
+.main .contact .contact-item .contact-item__list .item-list__inner .contact-list__icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 2px;
+}
+.main .contact .contact-item .contact-item__list .item-list__inner span {
+  display: block;
+  font-size: 14px;
+}
+.main .footer {
+  padding: 47px 0 20px;
+  background-color: #121212;
+  text-align: center;
+}
+.main .footer .footer-nav {
+  max-width: 641px;
+  margin: 0 auto;
+}
+.main .footer .footer-nav .footer-nav__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 58px;
+}
+.main .footer .footer-nav .footer-nav__item .nav-item__list {
+  border-right: 1px solid #ffffff;
+  padding-right: 38px;
+  box-sizing: border-box;
+}
+.main .footer .footer-nav .footer-nav__item .nav-item__list a {
+  font-size: 14px;
+  color: #ffffff;
+}
+.main .footer .footer-nav .footer-nav__item .nav-item__list:nth-of-type(2) {
+  padding: 0 35px 0 20px;
+}
+.main .footer .footer-nav .footer-nav__item .nav-item__list:nth-of-type(3) {
+  padding: 0 20px;
+}
+.main .footer .footer-nav .footer-nav__item .nav-item__list:nth-of-type(4) {
+  padding: 0 20px;
+}
+.main .footer .footer-nav .footer-nav__item .nav-item__list:nth-of-type(5) {
+  padding: 0 31px 0 20px;
+}
+.main .footer .footer-nav .footer-nav__item .nav-item__list:nth-of-type(6) {
+  padding: 0 0 0 20px;
+  border-right: 0;
+}
+.main .footer small {
+  color: #ffffff;
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */

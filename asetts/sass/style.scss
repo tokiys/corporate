@@ -80,7 +80,6 @@ img{
     .header-nav .header-nav-sns  li:last-of-type{
         padding-bottom: 0;
     }
-
 }
 
 
@@ -96,7 +95,6 @@ img{
         height: 100vh;
         position: relative;
         overflow: hidden;
-
         .video {
             width: 100%;
             height: 100%;
@@ -124,7 +122,6 @@ img{
                 flex-wrap: wrap;
                 gap: 50px;  // 要素間の間隔
                 justify-content: space-between;  // 均等に配置
-    
                 li{
                     width: calc(50% - 28px);  // 2列で表示（間隔を考慮）
                 }
@@ -169,6 +166,7 @@ img{
             }
         }
     }
+    /*-------- home-flow --------*/
     .home-flow{
         padding: 115px 0 125px;
         
@@ -211,17 +209,99 @@ img{
                     }
                 }
             }
-
         }
     }
+    /*-------- contact --------*/
     .contact{
         padding-bottom: 160px;
         h2{
             @include title.title-pro();
         }
-        p{
+        .contact-text{
             font-size: 16px;
             margin-bottom: 53px;
+        }
+        .contact-item{
+            display: flex;
+            justify-content: space-between;
+            .contact-item__list{
+                width: 258px;
+                height: 183px;
+                border: 1px solid #121212;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: 1px;
+                    right: -9px;
+                    width: 0;
+                    height: 0;
+                    border-left: 20px solid transparent;
+                    border-right: 20px solid transparent;
+                    border-bottom: 20px solid #121212;
+                    transform: rotate(135deg);
+                }
+                .item-list__inner{
+                    text-align: center;
+                    .contact-list__icon{
+                        width: 64px;
+                        height: 64px;
+                        margin-bottom: 2px;
+                    }
+                    span{
+                        display: block;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    /*-------- footer --------*/
+    .footer{
+        padding: 47px 0 20px;
+        background-color: #121212;
+        text-align: center;
+        .footer-nav{
+            max-width: 641px;
+            margin: 0 auto;
+            .footer-nav__item{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 58px;
+                .nav-item__list{
+                    border-right: 1px solid #ffffff;
+                    padding-right: 38px;
+                    box-sizing: border-box;
+                    a{
+                    font-size: 14px;
+                    color: #ffffff;
+
+                    }
+                }
+                .nav-item__list:nth-of-type(2){
+                    padding: 0 35px 0 20px;
+                }
+                .nav-item__list:nth-of-type(3){
+                    padding: 0 20px;
+                }
+                .nav-item__list:nth-of-type(4){
+                    padding: 0 20px;
+                }
+                .nav-item__list:nth-of-type(5){
+                    padding: 0 31px 0 20px;
+                }
+                .nav-item__list:nth-of-type(6){
+                    padding: 0 0 0 20px ;
+                    border-right: 0;
+                }
+            }
+        }
+        small{
+            color: #ffffff;
+            font-size: 12px;
         }
     }
 }
